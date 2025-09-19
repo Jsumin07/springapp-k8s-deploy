@@ -1,3 +1,27 @@
+# 🐳 Minikube를 활용한 Spring Boot Kubernetes 배포 가이드
+
+## 📌 개요
+이 문서는 **로컬의 Spring Boot 애플리케이션을 빌드한 jar 파일을 이용해 k8s에 등록 후 랜더링하는 과정**에 대한 설명을 제공합니다.
+
+## 🛠 환경 구성
+- **Spring Boot**: 2.x (Gradle 기반)  
+- **Ubuntu Server**: 20.04+  
+- **Docker**: 20.x 이상  
+- **Docker Hub** 계정 필요  
+- **Minikube** & **kubectl** 설치됨  
+
+---
+
+## 📂 프로젝트 구조 예시
+
+```bash
+ubuntu-server:/home/ubuntu/k8s_spring
+ ├─ app.jar           # 로컬에서 빌드한 Spring Boot JAR 파일
+ ├─ deploy.yaml       # deployment & service 생성 yaml 파일
+ ├─ ingress.yaml      # ingress 생성 yaml 파일
+ └─ Dockerfile        # 도커 이미지 생성용
+```
+
 ## 1. 목적
 
 - DB 연결이 필요 없는 단순 Spring Boot 웹앱을 Docker Hub에 이미지로 올리고 Kubernetes에서 배포
