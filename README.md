@@ -269,13 +269,13 @@ http://<클러스터노드IP>:30090
 
 ### 6.2 Ingress 접속
 
-1. 로컬 PC `/etc/hosts` 수정:
+1. 로컬 PC `/etc/hosts` 수정: 도메인 등록
 
 ```
-<클러스터노드IP> springapp01.loca
+<클러스터노드IP> springapp01.local
 ```
 
-1. 브라우저 / Postman:
+2. 브라우저 / Postman:
 ```
 http://springapp01.local
 ```
