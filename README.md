@@ -6,8 +6,8 @@
 - Ingress 충돌 방지 및 환경변수 설정 실습 포함
 
 ---
-
-## 2. 관련 개념
+<details>
+<summary><h2>2. 관련 개념</h2></summary>
 
 ## 1️⃣ Docker 관련 개념
 
@@ -90,6 +90,9 @@
     - 30000~32767 범위 내 사용
 4. **Docker Hub 연동**
     - 반드시 `docker build → docker push → kubectl Deployment image` 순서
+
+
+</details>
 
 ---
 
@@ -203,23 +206,30 @@ spec:
 kubectl apply -f deploy.yaml
 kubectl apply -f service.yaml
 kubectl apply -f ingress.yaml
+```
 
+<br>
+
+```bash
 # Pod 상태 확인
 kubectl get pods
 kubectl logs <pod-name>
+```
 
+<br>
+
+```bash
 # Pod 수 조절
 kubectl scale deployment springapp-deployment --replicas=5
-
-# 삭제
-kubectl delete -f deploy.yaml
-kubectl delete -f service.yaml
-kubectl delete -f ingress.yaml
 ```
+<img width="1470" height="125" alt="2image" src="https://github.com/user-attachments/assets/ea9660e8-15d4-46a4-930c-e56354a31c87" />
+
+
 
 ---
 
 ## 6. 외부 통신 확인
+
 
 ### 6.1 NodePort 접속
 
@@ -241,3 +251,5 @@ http://<클러스터노드IP>:30090
 ```
 http://springapp01.local
 ```
+
+<img width="1470" height="230" alt="3image" src="https://github.com/user-attachments/assets/f42e2ee0-5ece-4432-97f7-d6d51766da72" />
