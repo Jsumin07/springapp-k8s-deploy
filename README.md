@@ -114,6 +114,10 @@ ubuntu-server:/home/ubuntu/k8s_spring
     - 30000~32767 범위 내 사용
 4. **Docker Hub 연동**
     - 반드시 `docker build → docker push → kubectl Deployment image` 순서
+5. **설정을 편집할 때, 기존 설정을 삭제한 뒤에 yaml 파일을 수정하고 다시 적용시켜야 함**
+    - 예시 : nginx-ingress.yaml 설정을 수정할 경우
+   <img width="660" height="92" alt="image" src="https://github.com/user-attachments/assets/628b6f11-29ad-4cba-b166-dfc50c72b966" />
+
 
 
 </details>
